@@ -2,5 +2,3 @@ webapp:
  build: ./
  ports:
   - 80:8080
- volumes:
-   - /tmp/docker-ci/test.txt:/tmp/docker/test.txt
