@@ -3,7 +3,7 @@ WORKDIR /tmp/docker
 RUN apt-get -y update && apt-get -y upgrade && apt-get -y install git
 RUN apt-get -y install openjdk-8-jdk
 ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64
-RUN apt-get -y update && apt-get -y install maven
+RUN apt-get -y update && apt-get -y install maven && apt-get -y wget
 RUN git clone https://github.com/iankesh/Employees-Sample.git
 RUN cd Employees-Sample && mvn clean install -Dmaven.test.skip=true
 RUN mkdir /usr/local/tomcat
